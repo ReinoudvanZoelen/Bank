@@ -210,8 +210,6 @@ public class AccountTest {
         assertSame(accF1, accF2);
 //TODO verklaar verschil tussen beide scenario’s
 
-        //Senario 1 gaan allebei naar hetzelfde geheugen address
-        //Senario 2 is de cashe van de entityManager gecleared en krijgt accF2 een nieuw geheugen address
     }
 
     @Test
@@ -229,8 +227,7 @@ public class AccountTest {
         Account accFound = entityManager.find(Account.class, id);
         assertNull(accFound);
 //TODO: verklaar bovenstaande asserts
-        //assertEquals  het ID en de acc1.getID staan hier nog in het geheugen maar niet meer in de db.
-        //assertNull er staan op dit moment geen accounts meer in de db
+
 
     }
 
