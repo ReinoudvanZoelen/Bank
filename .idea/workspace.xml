@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ee7abc8-0a19-4446-b957-0865454adb56" name="Default" comment="Refactored to make a logical name">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java" afterPath="$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +81,8 @@
       <file leaf-file-name="AccountTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="144">
+              <caret line="199" column="35" lean-forward="true" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/main/java/bank/service/AccountMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/service/AccountManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/Models/Account.java" />
-        <option value="$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java" />
       </list>
     </option>
   </component>
@@ -882,7 +880,7 @@
       <workItem from="1493666726787" duration="2638000" />
       <workItem from="1493712629526" duration="509000" />
       <workItem from="1493713683455" duration="468000" />
-      <workItem from="1493714629872" duration="2574000" />
+      <workItem from="1493714629872" duration="3881000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored to make a logical name">
       <created>1493713885852</created>
@@ -923,7 +921,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6189000" />
+    <option name="totallyTimeSpent" value="7496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1137,8 +1135,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/bank/Models/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="144">
+          <caret line="199" column="35" lean-forward="true" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
