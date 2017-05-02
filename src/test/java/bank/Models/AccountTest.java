@@ -1,5 +1,6 @@
 package bank.Models;
 
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -54,10 +55,10 @@ public class AccountTest {
         entityManager.getTransaction().begin();
         entityManager.persist(account);
         //TODO: verklaar en pas eventueel aan
-        //assertNotEquals(expected, account.getId();
+        assertNotEquals(expected, account.getId());
         entityManager.flush();
         //TODO: verklaar en pas eventueel aan
-        //assertEquals(expected, account.getId();
+        //assertEquals(expected, account.getId());
         entityManager.getTransaction().commit();
         //TODO: verklaar en pas eventueel aan
 
@@ -87,6 +88,29 @@ public class AccountTest {
     @Test
     public void TestOpdrFive(){
 
+        Long expectedBalance = 400L;
+
+        entityManager.getTransaction().begin();
+
+        long id = 6;
+
+        Account a1 = (Account) entityManager.find(Account.class, id);
+        assertEquals(expectedBalance, a1.getBalance());
+        a1.setBalance(a1.getBalance() - 1);
+        assertNotEquals(expectedBalance, a1.getBalance());
+
+        Account a2 = (Account) entityManager.find(Account.class, id);
+        assertTrue(a1 == a2);
+
+        entityManager.refresh(a1);
+        assertTrue(a1 == a2);
+        assertEquals(expectedBalance, a1.getBalance());
+        assertEquals(expectedBalance, a2.getBalance());
+
+        entityManager.getTransaction().commit();
+
+
+
     }
 
     @Test
@@ -103,6 +127,7 @@ public class AccountTest {
         entityManager.persist(acc);
         acc.setBalance(balance1);
         entityManager.getTransaction().commit();
+        assertEquals(acc.getBalance(), balance1);
 //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifieren.
 //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
 
@@ -185,6 +210,8 @@ public class AccountTest {
         assertSame(accF1, accF2);
 //TODO verklaar verschil tussen beide scenario’s
 
+        //Senario 1 gaan allebei naar hetzelfde geheugen address
+        //Senario 2 is de cashe van de entityManager gecleared en krijgt accF2 een nieuw geheugen address
     }
 
     @Test
@@ -202,6 +229,8 @@ public class AccountTest {
         Account accFound = entityManager.find(Account.class, id);
         assertNull(accFound);
 //TODO: verklaar bovenstaande asserts
+        //assertEquals  het ID en de acc1.getID staan hier nog in het geheugen maar niet meer in de db.
+        //assertNull er staan op dit moment geen accounts meer in de db
 
     }
 
