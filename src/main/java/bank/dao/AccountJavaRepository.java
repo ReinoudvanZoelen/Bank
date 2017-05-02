@@ -7,11 +7,11 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
-public class AccountDAOJPAImpl implements AccountRepository {
+public class AccountJavaRepository implements AccountRepository {
 
     private final EntityManager em;
 
-    public AccountDAOJPAImpl(EntityManager em) {
+    public AccountJavaRepository(EntityManager em) {
         this.em = em;
     }
 
