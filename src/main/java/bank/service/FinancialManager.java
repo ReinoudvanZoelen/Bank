@@ -2,18 +2,18 @@ package bank.service;
 
 import bank.domain.Account;
 import bank.dao.AccountRepository;
-import bank.dao.AccountDAOJPAImpl;
+import bank.dao.AccountJavaRepository;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class FinancialMgr {
+public class FinancialManager {
 
     private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("bankPU");
 
     public Boolean transfer(Long fromAccountNr, Long toAccountNr, Long amount) {
         EntityManager em = emf.createEntityManager();
-        AccountRepository accountRepository = new AccountDAOJPAImpl(em);
+        AccountRepository accountRepository = new AccountJavaRepository(em);
         Boolean success = null;
         em.getTransaction().begin();
         try {
@@ -37,7 +37,7 @@ public class FinancialMgr {
 
     public Boolean deposit(Long accountNr, Long amount) {
         EntityManager em = emf.createEntityManager();
-        AccountRepository accountRepository = new AccountDAOJPAImpl(em);
+        AccountRepository accountRepository = new AccountJavaRepository(em);
         Boolean success = null;
         em.getTransaction().begin();
         try {
@@ -56,7 +56,7 @@ public class FinancialMgr {
 
     public Boolean withDraw(Long accountNr, Long amount) {
         EntityManager em = emf.createEntityManager();
-        AccountRepository accountRepository = new AccountDAOJPAImpl(em);
+        AccountRepository accountRepository = new AccountJavaRepository(em);
         Boolean success = null;
         em.getTransaction().begin();
         try {
