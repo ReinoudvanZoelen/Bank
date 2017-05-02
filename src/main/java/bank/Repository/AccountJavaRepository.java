@@ -1,6 +1,6 @@
-package bank.dao;
+package bank.Repository;
 
-import bank.domain.Account;
+import bank.Models.Account;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

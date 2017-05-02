@@ -1,6 +1,6 @@
 package util;
 
-import bank.domain.Account;
+import bank.Models.Account;
 import java.sql.SQLException;
 import javax.persistence.EntityManager;
 import javax.persistence.metamodel.EntityType;

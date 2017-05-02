@@ -1,4 +1,4 @@
-package bank.domain;
+package bank.Models;
 
 import java.io.Serializable;
 import javax.persistence.Column;

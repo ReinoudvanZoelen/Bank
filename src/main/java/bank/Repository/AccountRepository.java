@@ -1,6 +1,6 @@
-package bank.dao;
+package bank.Repository;
 
-import bank.domain.Account;
+import bank.Models.Account;
 import java.util.List;
 
 public interface AccountRepository {

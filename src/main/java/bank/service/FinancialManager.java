@@ -1,8 +1,8 @@
 package bank.service;
 
-import bank.domain.Account;
-import bank.dao.AccountRepository;
-import bank.dao.AccountJavaRepository;
+import bank.Models.Account;
+import bank.Repository.AccountRepository;
+import bank.Repository.AccountJavaRepository;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
