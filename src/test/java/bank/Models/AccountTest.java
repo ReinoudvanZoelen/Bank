@@ -170,6 +170,7 @@ public class AccountTest {
         entityManager.getTransaction().commit();
     }
 
+
     @Test
     public void TestOpdrSixScen1() {
         Account acc = new Account(1L);
@@ -236,7 +237,7 @@ public class AccountTest {
         assertFalse(entityManager.contains(acc2)); // verklaar
         // De reden dat deze false zijn is omdat de accounts niet in de entitymanager gezet zijn
         // Merge haalt alleen iets op, houdt ze niet bij
-        assertEquals(acc, acc2a);  //verklaar
+        assertNotEquals(acc, acc2a);  //verklaar
         // acc en acc2a zijn het zelfde omdat acc2a uit acc wordt gekopiëerd
         acc2.setBalance(balance3b);
         acc.setBalance(balance3c);
@@ -300,7 +301,7 @@ public class AccountTest {
         accF1 = entityManager.find(Account.class, acc1.getId());
         entityManager.clear();
         accF2 = entityManager.find(Account.class, acc1.getId());
-        assertSame(accF1, accF2);
+        assertNotSame(accF1, accF2);
         //TODO verklaar verschil tussen beide scenario’s
         //Scenario 1 gaan allebei naar hetzelfde geheugen address
         //Scenario 2 is de cashe van de entityManager gecleared en krijgt accF2 een nieuw geheugen address
@@ -334,5 +335,4 @@ public class AccountTest {
         // Een table onthoudt meer dan alleen het laatste nummer
         // Table vraagt iedere keer uit een tabel op wat het laatste nummer moet zijn
     }
-
 }
